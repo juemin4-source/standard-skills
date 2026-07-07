@@ -1,0 +1,5 @@
+﻿## PAT-007: Shared Mutable State (SMT)
+Trigger: Global/module-level mutable variable modified by multiple async contexts
+WRONG: let counter = 0; async function handle() { counter++; return counter; }
+RIGHT: atomic increment via redis/external store
+Flag: non-local var mutated inside async function/goroutine/callback, not protected by mutex/atomic/transaction.

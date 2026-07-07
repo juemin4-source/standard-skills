@@ -1,0 +1,5 @@
+﻿## PAT-006: Error Swallowed (ERR)
+Trigger: Empty catch, catch-and-return-default, ignored error return
+WRONG: try { await processPayment(o); } catch (e) { /* silent */ }
+RIGHT: catch (e) { logger.error("failed", e); throw e; }
+Flag: catch is empty, logs but continues as nothing happened, returns default without considering partial failure, or error code return is ignored.

@@ -1,0 +1,24 @@
+﻿from typing import List, Dict, Any, Optional
+
+class ___CLASS_NAME___:
+    """___DOCSTRING___"""
+
+    def __init__(self, ___INIT_PARAM___: ___INIT_TYPE___) -> None:
+        self.___ATTR_1___ = ___INIT_PARAM___
+
+    def ___METHOD_1___(self, ___METHOD_PARAM___: ___METHOD_TYPE___) -> ___METHOD_RETURN___:
+        """___METHOD_DOC___"""
+        return ___METHOD_RESULT___
+
+# Blank constraints:
+# ___CLASS_NAME___: PascalCase, ≤30
+# ___DOCSTRING___: ≤30
+# ___INIT_PARAM___: snake_case, ≤20
+# ___INIT_TYPE___: type hint, ≤20
+# ___ATTR_1___: snake_case, ≤20
+# ___METHOD_1___: snake_case, ≤30
+# ___METHOD_PARAM___: snake_case, ≤20
+# ___METHOD_TYPE___: type hint, ≤20
+# ___METHOD_RETURN___: type hint, ≤20
+# ___METHOD_DOC___: ≤30
+# ___METHOD_RESULT___: expression, ≤20

@@ -1,0 +1,15 @@
+﻿async function ___FUNCTION_NAME___(___PARAM_1___) {
+  try {
+    const result = await ___ASYNC_OPERATION___;
+    return result;
+  } catch (error) {
+    console.error("___ERROR_MESSAGE___", error);
+    return ___FAIL_RETURN___;
+  }
+}
+
+# ___FUNCTION_NAME___: camelCase, ≤30
+# ___PARAM_1___: camelCase, ≤20
+# ___ASYNC_OPERATION___: expression, ≤30. e.g. fetch(url), db.query(sql)
+# ___ERROR_MESSAGE___: string, ≤30
+# ___FAIL_RETURN___: fallback, ≤20. e.g. null, [], {}, false

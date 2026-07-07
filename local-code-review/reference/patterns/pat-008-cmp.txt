@@ -1,0 +1,5 @@
+﻿## PAT-008: Incorrect Comparison (CMP)
+Trigger: Float equality, object identity vs value, NaN comparison
+WRONG: if (a + b === 0.3) { renderExact(); } // 0.1+0.2=0.30000000000000004
+RIGHT: if (Math.abs((a+b)-0.3) < 1e-10) { renderExact(); }
+Flag: === on floats (use epsilon). NaN === NaN (use isNaN()). Object === when value equality intended (use deep compare).

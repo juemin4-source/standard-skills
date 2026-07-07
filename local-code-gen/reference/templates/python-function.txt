@@ -1,0 +1,18 @@
+﻿from typing import List, Dict, Any, Optional
+
+def ___FUNCTION_NAME___(___PARAM_1___: ___TYPE_1___) -> ___RETURN_TYPE___:
+    """
+    ___DOCSTRING___
+    """
+    result = ___INITIAL_RESULT___
+    ___BODY___
+    return result
+
+# Blank constraints:
+# ___FUNCTION_NAME___: snake_case, ≤30. e.g. process_data
+# ___PARAM_1___: snake_case, ≤20. e.g. items, config
+# ___TYPE_1___: type hint, ≤20. e.g. List[str], Dict, int
+# ___RETURN_TYPE___: type hint, ≤20. e.g. List[str], bool
+# ___DOCSTRING___: brief sentence, ≤30. e.g. "Filter active items from input"
+# ___INITIAL_RESULT___: expression, ≤20. e.g. [], {}, 0
+# ___BODY___: one-line description, ≤30. e.g. "filter items where status==active"

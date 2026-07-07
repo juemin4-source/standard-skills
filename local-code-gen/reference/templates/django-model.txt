@@ -1,0 +1,30 @@
+﻿from django.db import models
+
+class ___MODEL_NAME___(models.Model):
+    name = models.CharField(max_length=___MAX_LENGTH___)
+    ___FIELD_2___ = models.___FIELD_TYPE_2___(___FIELD_ARGS_2___)
+    ___FIELD_3___ = models.___FIELD_TYPE_3___(___FIELD_ARGS_3___)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "___VERBOSE_NAME___"
+        verbose_name_plural = "___VERBOSE_NAME_PLURAL___"
+        ordering = ["___DEFAULT_ORDERING___"]
+
+    def __str__(self):
+        return self.___STR_FIELD___
+
+# Blank constraints:
+# ___MODEL_NAME___: PascalCase, ≤30. e.g. Article, Category
+# ___MAX_LENGTH___: integer string, ≤3. e.g. 200
+# ___FIELD_2___: snake_case, ≤30. e.g. slug, email
+# ___FIELD_TYPE_2___: Django field class, ≤30. e.g. SlugField, EmailField, ForeignKey
+# ___FIELD_ARGS_2___: field args, ≤30. e.g. unique=True, "app.Author", on_delete=models.CASCADE
+# ___FIELD_3___: snake_case, ≤30
+# ___FIELD_TYPE_3___: Django field class, ≤30
+# ___FIELD_ARGS_3___: field args, ≤30
+# ___VERBOSE_NAME___: string, ≤30
+# ___VERBOSE_NAME_PLURAL___: string, ≤30
+# ___DEFAULT_ORDERING___: field name with sign, ≤20. e.g. "-created_at"
+# ___STR_FIELD___: field name, ≤20

@@ -1,0 +1,27 @@
+﻿async function ___FUNCTION_NAME___(___PARAM_1___: ___TYPE_1___) {
+  const url = `___BASE_URL___${___PARAM_1___}`;
+  const options = {
+    method: "___HTTP_METHOD___",
+    headers: { "Content-Type": "application/json" },
+    ___BODY_FIELD___
+  };
+
+  try {
+    const response = await fetch(url, options);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("___ERROR_MESSAGE___", error);
+    throw error;
+  }
+}
+
+# ___FUNCTION_NAME___: camelCase, ≤30
+# ___PARAM_1___: camelCase, ≤20
+# ___TYPE_1___: JSDoc type, ≤15. e.g. string, number
+# ___BASE_URL___: URL prefix, ≤30
+# ___HTTP_METHOD___: GET/POST/PUT/DELETE/PATCH, ≤6
+# ___BODY_FIELD___: body expression or empty, ≤30. Omit trailing comma for GET.
+# ___ERROR_MESSAGE___: string, ≤30

@@ -1,0 +1,5 @@
+﻿## PAT-004: Unvalidated Input (INP)
+Trigger: External data in SQL, shell, eval, file path, HTML without validation
+WRONG: db.run(`SELECT * FROM users WHERE id = ${req.params.id}`)
+RIGHT: db.run("SELECT * FROM users WHERE id = ?", [req.params.id])
+Flag: user input flows into SQL/shell/eval/filesystem/HTML/deserializer. Flag even for "internal tools." Requires VISIBLE data flow path within the diff.

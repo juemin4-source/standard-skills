@@ -1,0 +1,17 @@
+﻿from django.views.generic import ___VIEW_TYPE___
+from .models import ___MODEL_NAME___
+from django.urls import reverse_lazy
+
+class ___CLASS_NAME___(___VIEW_TYPE___):
+    model = ___MODEL_NAME___
+    template_name = "___TEMPLATE_NAME___"
+    context_object_name = "___CONTEXT_NAME___"
+    paginate_by = ___PAGINATE_BY___
+
+# Blank constraints:
+# ___VIEW_TYPE___: Django generic view class, ≤30. e.g. ListView, DetailView
+# ___MODEL_NAME___: PascalCase, ≤30
+# ___CLASS_NAME___: PascalCase, ≤30. e.g. ArticleListView
+# ___TEMPLATE_NAME___: template path, ≤30. e.g. "articles/list.html"
+# ___CONTEXT_NAME___: template context var, ≤30. e.g. "articles"
+# ___PAGINATE_BY___: integer string or empty, ≤3. e.g. 10

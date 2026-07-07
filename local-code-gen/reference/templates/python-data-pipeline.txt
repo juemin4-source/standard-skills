@@ -1,0 +1,31 @@
+﻿import json
+from typing import List, Dict, Any
+
+def load_data(path: str) -> List[Dict[str, Any]]:
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def transform(item: Dict[str, Any]) -> Dict[str, Any]:
+    return {
+        "___OUTPUT_KEY_1___": item.get("___INPUT_KEY_1___"),
+        "___OUTPUT_KEY_2___": item.get("___INPUT_KEY_2___"),
+    }
+
+def save_data(data: List[Dict[str, Any]], path: str) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+def run(input_path: str, output_path: str) -> None:
+    raw = load_data(input_path)
+    transformed = [transform(item) for item in raw]
+    save_data(transformed, output_path)
+
+if __name__ == "__main__":
+    run("___DEFAULT_INPUT___", "___DEFAULT_OUTPUT___")
+
+# ___OUTPUT_KEY_1___: snake_case, ≤30
+# ___INPUT_KEY_1___: snake_case, ≤30
+# ___OUTPUT_KEY_2___: snake_case, ≤30
+# ___INPUT_KEY_2___: snake_case, ≤30
+# ___DEFAULT_INPUT___: file path, ≤30
+# ___DEFAULT_OUTPUT___: file path, ≤30

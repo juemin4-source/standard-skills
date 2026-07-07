@@ -1,0 +1,5 @@
+﻿## PAT-011: Hardcoded Secret (SEC)
+Trigger: String literal containing password, API key, token, private key, connection string
+WRONG: const apiKey = "sk-abc123def456";
+RIGHT: const apiKey = process.env.API_KEY;
+Flag: literal matches password=/api_key=/token=/secret=/-----BEGIN/sk-/AKIA patterns, or high-entropy string >20 chars assigned to key/secret/token/password variable. Flag in tests and comments too.

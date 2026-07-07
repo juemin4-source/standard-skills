@@ -1,0 +1,5 @@
+﻿## PAT-001: Off-By-One (OBO)
+Trigger: Loop with <= on zero-indexed collection, or array[i-1] without guard
+WRONG: for (let i = 0; i <= arr.length; i++) { sum += arr[i]; }
+RIGHT: for (let i = 0; i < arr.length; i++) { sum += arr[i]; }
+Flag: loop uses <= on zero-indexed array, OR index i-1/i+1 without boundary guard (i>0, i<len-1)

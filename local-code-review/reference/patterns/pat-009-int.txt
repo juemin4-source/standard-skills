@@ -1,0 +1,5 @@
+﻿## PAT-009: Integer Overflow (INT)
+Trigger: Arithmetic on bounded integer type without overflow guard
+WRONG: uint8_t val = 200; val += 100; // wraps to 44, no warning
+RIGHT: if (val > UINT8_MAX - 100) { reject(); } else { val += 100; }
+Flag: integer add/sub/mul/neg on bounded type lacks range check AND value originates externally or grows unboundedly.

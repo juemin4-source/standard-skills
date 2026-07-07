@@ -1,0 +1,5 @@
+﻿## PAT-002: Null/Undefined Dereference (NLL)
+Trigger: Property/method access without prior null check
+WRONG: return config.timeout * 1000  // config could be undefined
+RIGHT: const t = config?.timeout ?? 500; return t * 1000
+Flag: function param or return value accessed as object without null guard AND variable not guaranteed non-null by type or prior assignment

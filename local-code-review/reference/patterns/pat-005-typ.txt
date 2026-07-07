@@ -1,0 +1,5 @@
+﻿## PAT-005: Type Coercion Surprise (TYP)
+Trigger: Loose equality (==), string+number, boolean coercion in non-boolean context
+WRONG: if (userInput == true) { grantAccess(); }
+RIGHT: if (userInput === "true") { grantAccess(); }
+Flag: == where types differ. + mixing string and number unless intent is explicit via String()/Number().

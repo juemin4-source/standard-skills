@@ -1,0 +1,5 @@
+﻿## PAT-003: Resource Not Released (RSL)
+Trigger: open()/create()/lock() without matching close()/destroy()/unlock()
+WRONG: const fd = fs.openSync(path, "w"); fd.write(data); // no fd.close()
+RIGHT: try { fd.write(data); } finally { fd.close(); }
+Flag: resource acquisition lacks matching release in finally/defer/with/using. Flag even if release exists on happy path but not error paths.

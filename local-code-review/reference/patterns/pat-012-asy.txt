@@ -1,0 +1,5 @@
+﻿## PAT-012: Async Mishandling (ASY)
+Trigger: async called without await, promise without .catch(), promise not returned
+WRONG: function start() { doWorkAsync(); return "started"; }
+RIGHT: async function start() { await doWorkAsync(); return "started"; }
+Flag: async called without await in async context (unless explicit fire-and-forget). Promise without .catch(). Event handler/middleware calls async without handling promise.

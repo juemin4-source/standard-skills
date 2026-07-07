@@ -1,0 +1,25 @@
+﻿import argparse
+import sys
+from typing import List
+
+def ___FUNCTION_NAME___(args: argparse.Namespace) -> None:
+    """___DOCSTRING___"""
+    ___BODY___
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="___DESCRIPTION___")
+    parser.add_argument("___ARG_NAME___", type=___ARG_TYPE___, help="___ARG_HELP___")
+    args = parser.parse_args()
+    ___FUNCTION_NAME___(args)
+
+if __name__ == "__main__":
+    main()
+
+# Blank constraints:
+# ___FUNCTION_NAME___: snake_case, ≤30
+# ___DOCSTRING___: ≤30
+# ___DESCRIPTION___: ≤30
+# ___ARG_NAME___: with/without dash, ≤20. e.g. input_file, --verbose
+# ___ARG_TYPE___: type, ≤15. e.g. str, int, bool
+# ___ARG_HELP___: ≤30
+# ___BODY___: one-line description, ≤30

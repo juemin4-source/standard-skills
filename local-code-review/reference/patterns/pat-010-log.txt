@@ -1,0 +1,5 @@
+﻿## PAT-010: Logic Error (LOG)
+Trigger: && used where || intended, or vice versa; incorrectly negated condition
+WRONG: if (!user.isAdmin && user.isActive) { denyAccess(); } // wrong De Morgan
+RIGHT: if (!user.isAdmin || !user.isActive) { denyAccess(); }
+Flag: !(A && B) is !A || !B, not !A && !B. Check De Morgan: when you see !A && B or A || !B near guard, verify.
