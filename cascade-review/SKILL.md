@@ -1,4 +1,4 @@
-﻿---
+---
 name: cascade-review
 description: "Deep code review using 4 parallel entry-point cascades. Data/State/Coupling/Pattern audits, each cascading until exhausted. For strong models (Claude). Probes are attention guides, not boundaries."
 ---

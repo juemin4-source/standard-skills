@@ -1,4 +1,4 @@
-﻿---
+---
 name: local-code-review
 description: "Pattern-based code review for LOCAL/WEAK models. Walks full decision tree, records all matches, then reports. Each finding requires exact line + code evidence."
 ---

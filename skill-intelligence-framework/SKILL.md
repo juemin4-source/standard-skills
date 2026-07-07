@@ -1,4 +1,4 @@
-﻿---
+---
 name: skill-intelligence-framework
 description: "Root skill. Routes any Skill design or evaluation task to the correct archetype guide. Does not contain design logic itself."
 ---

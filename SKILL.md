@@ -1,4 +1,4 @@
-﻿---
+---
 name: standard-skills
 description: "Standard Skills — 给 Agent Skill 定标准的工作室。包含元 Skill 框架、强/弱模型代码审查、弱模型代码生成。"
 ---

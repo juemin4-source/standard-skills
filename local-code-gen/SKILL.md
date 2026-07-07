@@ -1,4 +1,4 @@
-﻿---
+---
 name: local-code-gen
 description: "Template-driven code generation for LOCAL/WEAK models. Skeleton + fill blanks. Templates in reference/templates/, loaded on demand."
 ---
